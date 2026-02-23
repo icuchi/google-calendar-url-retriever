@@ -51,9 +51,9 @@
     const text = popup.textContent || '';
 
     // --- Japanese patterns ---
-    // "X月 Y日 (曜日) · HH:MM～HH:MM"
+    // "X月 Y日 (曜日) · (午前/午後)HH:MM～(午前/午後)HH:MM"
     const jpDateTime = text.match(
-      /\d{1,2}月\s*\d{1,2}日\s*\([月火水木金土日]曜日\)\s*[·⋅•]\s*\d{1,2}:\d{2}\s*[～〜–\-]\s*\d{1,2}:\d{2}/
+      /\d{1,2}月\s*\d{1,2}日\s*\([月火水木金土日]曜日\)\s*[·⋅•]\s*(?:午前|午後)?\s*\d{1,2}:\d{2}\s*[～〜–\-]\s*(?:午前|午後)?\s*\d{1,2}:\d{2}/
     );
     if (jpDateTime) return jpDateTime[0];
 
