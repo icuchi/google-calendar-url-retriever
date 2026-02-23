@@ -1,0 +1,77 @@
+/*
+ * Google Calendar URL Retriever — Styles
+ *
+ * All classes prefixed with gcal-url-retriever- to avoid conflicts
+ * with Google Calendar's own styles.
+ */
+
+/* --- Copy Button --- */
+.gcal-url-retriever-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0 16px;
+  margin: 4px 8px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #1a73e8;
+  font-family: 'Google Sans', Roboto, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+  transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  vertical-align: middle;
+}
+
+.gcal-url-retriever-btn:hover {
+  background-color: #f6fafe;
+  border-color: #c6d9f1;
+}
+
+.gcal-url-retriever-btn:active {
+  background-color: #e8f0fe;
+  border-color: #1a73e8;
+}
+
+.gcal-url-retriever-btn:focus-visible {
+  outline: 2px solid #1a73e8;
+  outline-offset: 2px;
+}
+
+/* --- Toast Notification --- */
+.gcal-url-retriever-toast {
+  position: fixed;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99999;
+  min-width: 200px;
+  max-width: 400px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background-color: #323232;
+  color: #fff;
+  font-family: 'Google Sans', Roboto, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+  opacity: 0;
+  transition: bottom 0.3s ease, opacity 0.3s ease;
+}
+
+.gcal-url-retriever-toast--visible {
+  bottom: 32px;
+  opacity: 1;
+}
+
+.gcal-url-retriever-toast--error {
+  background-color: #d93025;
+}
